@@ -1,0 +1,115 @@
+[
+    {
+"id": 1,
+"title": "STIR FRIED CHILLY CHICKEN",
+"avg_review": 3,
+"cont_review": 1,
+"mrp": 17.99,
+"selling_price": 17.99,
+"currency":"$",
+"images": "/assets/image/product1.png"
+    },
+    {
+        "id": 2,
+        "title": "STIR FRIED CHILLY CHICKEN",
+        "avg_review": 4,
+        "cont_review": 1,
+        "mrp": 17.99,
+        "selling_price": 17.99,
+        "currency":"$",
+        "images": "/assets/image/product1.png"
+            },
+            {
+                "id": 3,
+                "title": "STIR FRIED CHILLY CHICKEN",
+                "avg_review": 3,
+                "cont_review": 1,
+                "mrp": 17.99,
+                "selling_price": 17.99,
+                "currency":"$",
+                "images": "/assets/image/product1.png"
+                    },
+                    {
+                        "id": 4,
+                        "title": "STIR FRIED CHILLY CHICKEN",
+                        "avg_review": 5,
+                        "cont_review": 1,
+                        "mrp": 17.99,
+                        "selling_price": 17.99,
+                        "currency":"$",
+                        "images": "/assets/image/product1.png"
+                            },
+                            {
+                                "id": 5,
+                                "title": "STIR FRIED CHILLY CHICKEN",
+                                "avg_review": 1,
+                                "cont_review": 1,
+                                "mrp": 17.99,
+                                "selling_price": 17.99,
+                                "currency":"$",
+                                "images": "/assets/image/product1.png"
+                                    }
+                                    ,
+                    {
+                        "id": 6,
+                        "title": "STIR FRIED CHILLY CHICKEN",
+                        "avg_review": 5,
+                        "cont_review": 1,
+                        "mrp": 17.99,
+                        "selling_price": 17.99,
+                        "currency":"$",
+                        "images": "/assets/image/product1.png"
+                            },
+                            {
+                                "id": 7,
+                                "title": "STIR FRIED CHILLY CHICKEN",
+                                "avg_review": 1,
+                                "cont_review": 1,
+                                "mrp": 17.99,
+                                "selling_price": 17.99,
+                                "currency":"$",
+                                "images": "/assets/image/product1.png"
+                                    }
+                                    ,
+                    {
+                        "id": 8,
+                        "title": "STIR FRIED CHILLY CHICKEN",
+                        "avg_review": 5,
+                        "cont_review": 1,
+                        "mrp": 17.99,
+                        "selling_price": 17.99,
+                        "currency":"$",
+                        "images": "/assets/image/product1.png"
+                            },
+                            {
+                                "id": 9,
+                                "title": "STIR FRIED CHILLY CHICKEN",
+                                "avg_review": 1,
+                                "cont_review": 1,
+                                "mrp": 17.99,
+                                "selling_price": 17.99,
+                                "currency":"$",
+                                "images": "/assets/image/product1.png"
+                                    }
+                                    ,
+                    {
+                        "id": 10,
+                        "title": "STIR FRIED CHILLY CHICKEN",
+                        "avg_review": 5,
+                        "cont_review": 1,
+                        "mrp": 17.99,
+                        "selling_price": 17.99,
+                        "currency":"$",
+                        "images": "/assets/image/product1.png"
+                            },
+                            {
+                                "id": 11,
+                                "title": "STIR FRIED CHILLY CHICKEN",
+                                "avg_review": 1,
+                                "cont_review": 1,
+                                "mrp": 17.99,
+                                "selling_price": 17.99,
+                                "currency":"$",
+                                "images": "/assets/image/product1.png"
+                                    }
+]

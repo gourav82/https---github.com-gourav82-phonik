@@ -1,0 +1,79 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: $white;
+    &--top{
+        &-nav{
+            height: 28px;
+        }
+    }
+    &--menu{
+    //     &-hover{
+    //         .mini-cart{
+    //             position: absolute;
+    //             width: 200px;
+    //             background-color: greenyellow; 
+    //             top: 30px;
+    //             padding: 22px 16px 18px;
+    //             box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
+    //             border-radius: 4px;
+    //             transition: 0.4s ease-in-out;
+    //             pointer-events: none;
+    //             right: -20px;
+    //             opacity: 0;
+    //     }
+    //     &:hover{
+    //         position: absolute;
+    //         top: 10%;
+            
+    //         background-color: greenyellow; 
+    //         height: auto;
+    //         opacity: 1;
+           
+    //     }
+    // }
+        &-items{
+            ul{
+             @include max(1024) {
+             display: none;
+              
+             } 
+            }
+        }
+        &-search{
+            @include max(1024) {
+                display: none;    
+                }   
+        }
+        &-cart{
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            color: $white;
+            top: -5px;
+            right: -7px;
+        }
+        .cart-mobile{
+            @include max(1024) {
+                display: flex;  
+                justify-content: end;
+                font-size: 22px;
+            }  
+        }
+    }
+}
+
+.EZDrawer .EZDrawer__container {
+    position: fixed;
+    visibility: hidden;
+    background: $error;
+    transition: all;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    height: 35vh !important;
+    border-radius: 10px;
+    top: 5% !important;
+    right: 13% !important;
+    width: 200px;
+}

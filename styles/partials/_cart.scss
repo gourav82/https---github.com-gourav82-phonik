@@ -1,0 +1,8 @@
+.cart{
+    margin-top: 150px;
+    &--details{
+        &-price{
+            border-bottom: 2px dotted $grey;
+        }
+    }
+}

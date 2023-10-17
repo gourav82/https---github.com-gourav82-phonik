@@ -1,0 +1,267 @@
+.drawer, .modal{
+  .close {
+    position: absolute;
+    top: -45px;
+    right: -10px;
+
+    @include maxOrientation(1024, portrait) {
+      top: -20px;
+      right: 0;
+    }
+  }
+}
+.drawer {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform var(--transition-speed) ease;
+
+  &-container {
+    --transition-speed: 1s;
+    transition: ease-in-out;
+    position: fixed;
+    // top: 0;
+    left: 0;
+    z-index: 100;
+
+    &.fullScreen {
+      height: 100vh;
+      width: 100%;
+    }
+
+
+  &.left {
+    top: 0;
+    left: 0;
+    transform: translateX(-105%);
+  }
+
+  &.right {
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  &.top {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(-100%);
+  }
+
+  &.bottom {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  &.open.in.left,
+  &.open.in.right {
+    transform: translateX(0);
+  }
+
+  &.open.in.top,
+  &.open.in.bottom {
+    transform: translateY(0);
+  }
+
+  &.open.in.overlay {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 999;
+  }
+
+}
+}
+.modal {
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -200vh);
+  transition: transform 0.4s ease-in-out;
+  overflow: visible;
+  border-radius: 10px;
+  padding: 10px;
+
+  @include maxOrientation(1024, 'portrait') {
+    padding: 0px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &.active {
+    transform: translate(-50%, -50%);
+  }
+
+  &--header {
+   &-close{
+    position: absolute;
+    right: 0;
+   }
+  }
+
+  &-content {
+    // padding: 20px 20px 30px;
+    // max-height: 85vh;
+    // height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 15px;
+    @include maxOrientation(1024, "portrait") {
+      padding: 10px 10px 20px;
+    }
+  }
+  &-success {
+    width: 380px;
+    .modal-content {
+      .icon-container {
+        margin: 20px 0;
+        .success-msg {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.7);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+.tutorial {
+  &--overlay {
+    z-index: 7;
+  }
+  &--modal-banner,
+  &--modal-card {
+    position: absolute;
+    z-index: 8;
+    width: 350px;
+    @include max(640) {
+      width: 90%;
+    }
+    button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      position: absolute;
+      margin: 0 auto;
+    }
+  }
+  &--modal-banner {
+    top: 120px;
+    right: -140px;
+    @include max(640) {
+      top: -100px;
+      left: 0;
+      transform: translateX(6%);
+    }
+    &::after {
+      border-bottom: none;
+      border-top: 20px solid $white;
+      top: unset;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+    }
+  }
+  &--modal-card {
+    top: 175px;
+    left: -70px;
+    @include max(640) {
+      top: 40px;
+      right: -5px;
+      left: unset;
+    }
+    &::after {
+      border-top: 20px solid $white;
+      bottom: -10px;
+      right: 7px;
+    }
+  }
+}
+.sortby {
+  &--md {
+    padding: 15px;
+  }
+
+  &--list {
+    margin-top: 20px;
+
+    li {
+      padding: 5px 0px;
+      border-top: 1px solid rgba($color: #F0F0F0, $alpha: 1);
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      button {
+        width: 100%;
+        justify-content: flex-start;
+        text-transform: capitalize;
+        color: rgba($color: #000000, $alpha: 0.7);
+      }
+
+      &.active {
+        background-color: $grey;
+
+        button {
+          color: $black;
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+}
+
+.loading-container {
+
+  .global-loading {
+    background: $white;
+    margin: auto;
+
+    @include max(1024) {
+      width: 30%;
+    }
+
+    .loader-txt {
+      margin-top: -25px;
+      @include max(1024) {
+        margin-bottom: 25px;
+      }
+    }
+
+    div {
+      margin: 0 auto;
+    }
+  }
+}

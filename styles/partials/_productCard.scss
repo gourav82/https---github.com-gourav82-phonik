@@ -1,0 +1,24 @@
+.product{
+    // margin: 0 auto;
+    
+}
+.latest{
+    width: 15%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    @include max(1024) {
+     width: 47%;
+    } 
+    &:nth-child(6n+6){
+        margin-right: 0;
+    }
+    @include max(1024) {
+        &:nth-child(2n+2){
+            margin-right: 0;
+        }    }
+}
+.cat{
+    @include max(1024) {
+        width: 90%;
+       }  
+}

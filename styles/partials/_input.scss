@@ -1,0 +1,465 @@
+.form {
+    &-group,
+    &-group-dashboard {
+        position: relative;
+        .pure-material-textfield-outlined {
+            position: relative;
+            display: inline-block;
+            font-size: size(16);
+            line-height: 1.5;
+            width: 100%;
+            &.date-input {
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 12px;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        /* Input, Textarea */
+        .pure-material-textfield-outlined>input[name=mobileNo],
+        .pure-material-textfield-outlined>input[name=mobile],
+        .pure-material-textfield-outlined>input,
+        .pure-material-textfield-outlined>textarea {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            border: solid 1px;
+            /* Safari */
+            border-top-color: transparent !important;
+            padding: 13px 13px 13px;
+            width: 100%;
+            height: inherit;
+            color: $black;
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            /* Firefox */
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+            line-height: inherit;
+            -webkit-transition: border 0.2s, -webkit-box-shadow 0.2s;
+            transition: border 0.2s, -webkit-box-shadow 0.2s;
+            -o-transition: border 0.2s, box-shadow 0.2s;
+            transition: border 0.2s, box-shadow 0.2s;
+            transition: border 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+            &.dark {
+                color: $white;
+            }
+        }
+        .pure-material-textfield-outlined>input[name=mobileNo],
+        .pure-material-textfield-outlined>input[name=mobile] {
+            padding-left: 90px;
+        }
+        /* span */
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~.login-mobile,
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~.mobile-label,
+        .pure-material-textfield-outlined>input~label {
+            position: absolute;
+            top: calc(100% + 2px);
+            left: 0;
+            width: 100%;
+            padding: 0 13px;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~.login-mobile,
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~.mobile-label {
+            left: 65px;
+            top: 0 !important;
+        }
+        .pure-material-textfield-outlined>input~label.error {
+            color: red;
+        }
+        .pure-material-textfield-outlined>input~span,
+        .pure-material-textfield-outlined>textarea~span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-color: rgba($color: $grey, $alpha: 0.4);
+            width: 100%;
+            max-height: 100%;
+            font-size: 75%;
+            line-height: 5px;
+            cursor: text;
+            -webkit-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+            -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+            transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+            &.dark {
+                color: $white;
+            }
+        }
+        /* Corners */
+        .pure-material-textfield-outlined>.message--error-border~span::before,
+        .pure-material-textfield-outlined>.message--error-border~span::after {
+            content: "";
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-top: solid 1px;
+            border-top-color: $error;
+            min-width: 10px;
+            height: 8px;
+            pointer-events: none;
+            -webkit-transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+            transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+            -o-transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+
+        }
+        .pure-material-textfield-outlined>input~.login-mobile::before,
+        .pure-material-textfield-outlined>input~.login-mobile::after,
+        .pure-material-textfield-outlined>input~.mobile-label::before,
+        .pure-material-textfield-outlined>input~.mobile-label::after,
+        .pure-material-textfield-outlined>input~span::before,
+        .pure-material-textfield-outlined>input~span::after,
+        .pure-material-textfield-outlined>textarea~span::before,
+        .pure-material-textfield-outlined>textarea~span::after {
+            content: "";
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border-top: solid 1px;
+            min-width: 10px;
+            height: 8px;
+            pointer-events: none;
+            -webkit-transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+            transition: border-color 0.2s, -webkit-box-shadow 0.2s;
+            -o-transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+        }
+        .pure-material-textfield-outlined>input~span::before,
+        .pure-material-textfield-outlined>textarea~span::before {
+            margin-right: 4px;
+            border-left: solid 1px transparent;
+        }
+        .pure-material-textfield-outlined>input~.login-mobile::after,
+        .pure-material-textfield-outlined>input~.mobile-label::after,
+        .pure-material-textfield-outlined>input~span::after,
+        .pure-material-textfield-outlined>textarea~span::after {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            margin-left: 4px;
+            border-right: solid 1px transparent;
+        }
+        .pure-material-textfield-outlined>input,
+        .pure-material-textfield-outlined>textarea {
+            &::-webkit-input-placeholder {
+                /* Edge */
+                color: transparent;
+            }
+
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: transparent;
+            }
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+        /* Hover */
+        .pure-material-textfield-outlined:hover>input:not(:focus):-moz-placeholder-shown,
+        .pure-material-textfield-outlined:hover>textarea:not(:focus):-moz-placeholder-shown {
+            border-color: rgba($color: $grey, $alpha: 0.4);
+        }
+        .pure-material-textfield-outlined:hover>input:not(:focus):-ms-input-placeholder,
+        .pure-material-textfield-outlined:hover>textarea:not(:focus):-ms-input-placeholder {
+            border-color: rgba($color: $grey, $alpha: 0.4);
+        }
+        /* Placeholder-shown */
+        .pure-material-textfield-outlined>input:not(:focus):-moz-placeholder-shown,
+        .pure-material-textfield-outlined>textarea:not(:focus):-moz-placeholder-shown {
+            border-top-color: rgba($color: $grey, $alpha: 0.4);
+        }
+        .pure-material-textfield-outlined>input:not(:focus):-ms-input-placeholder,
+        .pure-material-textfield-outlined>textarea:not(:focus):-ms-input-placeholder {
+            border-top-color: rgba($color: $grey, $alpha: 0.4);
+        }
+        .pure-material-textfield-outlined>.message--error-border:not(:focus):placeholder-shown {
+            border-top-color: $error !important;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):-moz-placeholder-shown~span,
+        .pure-material-textfield-outlined>textarea:not(:focus):-moz-placeholder-shown~span {
+            font-size: inherit;
+            line-height: 45px;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):-ms-input-placeholder~span,
+        .pure-material-textfield-outlined>textarea:not(:focus):-ms-input-placeholder~span {
+            font-size: inherit;
+            line-height: 49px;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~span,
+        .pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown~span {
+            font-size: inherit;
+            line-height: 49px;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):-moz-placeholder-shown~span::before,
+        .pure-material-textfield-outlined>textarea:not(:focus):-moz-placeholder-shown~span::before,
+        .pure-material-textfield-outlined>input:not(:focus):-moz-placeholder-shown~span::after,
+        .pure-material-textfield-outlined>textarea:not(:focus):-moz-placeholder-shown~span::after {
+            border-top-color: transparent;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):-ms-input-placeholder~span::before,
+        .pure-material-textfield-outlined>textarea:not(:focus):-ms-input-placeholder~span::before,
+        .pure-material-textfield-outlined>input:not(:focus):-ms-input-placeholder~span::after,
+        .pure-material-textfield-outlined>textarea:not(:focus):-ms-input-placeholder~span::after {
+            border-top-color: transparent;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~span::before,
+        .pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown~span::before,
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown~span::after,
+        .pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown~span::after {
+            border-top-color: transparent;
+        }
+        /* Focus */
+        .pure-material-textfield-outlined>input:focus,
+        .pure-material-textfield-outlined>textarea:focus {
+            border-color: $goldColor !important;
+            border-top-color: transparent !important;
+            outline: none;
+        }
+        .pure-material-textfield-outlined>.message--error-border:focus {
+            border-color: $error !important;
+            border-top-color: transparent !important;
+            outline: none;
+        }
+        .pure-material-textfield-outlined>.message--error-border:focus~span {
+            color: $error;
+        }
+        .pure-material-textfield-outlined>input:focus~span,
+        .pure-material-textfield-outlined>textarea:focus~span {
+            color: $goldColor;
+        }
+        .pure-material-textfield-outlined>input:focus~span::before,
+        .pure-material-textfield-outlined>input:focus~span::after,
+        .pure-material-textfield-outlined>textarea:focus~span::before,
+        .pure-material-textfield-outlined>textarea:focus~span::after {
+            border-top-color: $goldColor !important;
+        }
+        .pure-material-textfield-outlined>.message--error-border:focus~span::before,
+        .pure-material-textfield-outlined>.message--error-border:focus~span::after {
+            border-top-color: $error !important;
+        }
+        /* Disabled */
+        .pure-material-textfield-outlined>input:disabled:-moz-placeholder-shown,
+        .pure-material-textfield-outlined>input:disabled:-moz-placeholder-shown~span,
+        .pure-material-textfield-outlined>textarea:disabled:-moz-placeholder-shown,
+        .pure-material-textfield-outlined>textarea:disabled:-moz-placeholder-shown~span {
+            border-top-color: $grey !important;
+        }
+        .pure-material-textfield-outlined>input:disabled:-ms-input-placeholder,
+        .pure-material-textfield-outlined>input:disabled:-ms-input-placeholder~span,
+        .pure-material-textfield-outlined>textarea:disabled:-ms-input-placeholder,
+        .pure-material-textfield-outlined>textarea:disabled:-ms-input-placeholder~span {
+            border-top-color: $grey !important;
+        }
+        .pure-material-textfield-outlined>input:disabled:-moz-placeholder-shown~span::before,
+        .pure-material-textfield-outlined>input:disabled:-moz-placeholder-shown~span::after,
+        .pure-material-textfield-outlined>textarea:disabled:-moz-placeholder-shown~span::before,
+        .pure-material-textfield-outlined>textarea:disabled:-moz-placeholder-shown~span::after {
+            border-top-color: transparent !important;
+        }
+        .pure-material-textfield-outlined>input:disabled:-ms-input-placeholder~span::before,
+        .pure-material-textfield-outlined>input:disabled:-ms-input-placeholder~span::after,
+        .pure-material-textfield-outlined>textarea:disabled:-ms-input-placeholder~span::before,
+        .pure-material-textfield-outlined>textarea:disabled:-ms-input-placeholder~span::after {
+            border-top-color: transparent !important;
+        }
+        .pure-material-textfield-outlined>input:disabled:placeholder-shown~span::before,
+        .pure-material-textfield-outlined>input:disabled:placeholder-shown~span::after,
+        .pure-material-textfield-outlined>textarea:disabled:placeholder-shown~span::before,
+        .pure-material-textfield-outlined>textarea:disabled:placeholder-shown~span::after {
+            border-top-color: transparent !important;
+        }
+        /* Faster transition in Safari for less noticable fractional font-size issue */
+        @media not all and (min-resolution: 0.001dpcm) {
+            @supports (-webkit-appearance: none) {
+
+                .pure-material-textfield-outlined>input,
+                .pure-material-textfield-outlined>input~span,
+                .pure-material-textfield-outlined>textarea,
+                .pure-material-textfield-outlined>textarea~span,
+                .pure-material-textfield-outlined>input~span::before,
+                .pure-material-textfield-outlined>input~span::after,
+                .pure-material-textfield-outlined>textarea~span::before,
+                .pure-material-textfield-outlined>textarea~span::after {
+                    -webkit-transition-duration: 0.1s;
+                    -o-transition-duration: 0.1s;
+                    transition-duration: 0.1s;
+                }
+            }
+        }
+    }
+
+    &-group {
+        .mobilenumber {
+            position: absolute;
+            padding: 0 25px 0 15px;
+            margin: 14px 5px 14px 0;
+            z-index: 1;
+            &::after {
+                content: "\e92a";
+                position: absolute;
+                font-size: size(12);
+                top: 5px;
+                right: 0;
+                padding-right: 5px;
+                border-right: 1px solid rgba($color: $grey, $alpha: 0.4);
+            }
+        }
+        .pure-material-textfield-outlined>input:focus~.login-mobile,
+        .pure-material-textfield-outlined>input:focus~.mobile-label {
+            padding: 0;
+            left: 0 !important;
+        }
+        .pure-material-textfield-outlined>input[name=mobileNo],
+        .pure-material-textfield-outlined>input[name=mobile],
+        .pure-material-textfield-outlined>input,
+        .pure-material-textfield-outlined>textarea {
+            border-color: rgba($grey, 0.9);
+        }
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown,
+        .pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown {
+            border-top-color: rgba($grey, 0.9) !important;
+        }
+        .pure-material-textfield-outlined:hover>input:not(:focus):placeholder-shown,
+        .pure-material-textfield-outlined:hover>textarea:not(:focus):placeholder-shown {
+            border-color: rgba($grey, 0.9);
+        }
+        .pure-material-textfield-outlined:hover>input,
+        .pure-material-textfield-outlined:hover>textarea {
+            border-color: rgba($grey, 0.9);
+        }
+        .pure-material-textfield-outlined>input~span::before,
+        .pure-material-textfield-outlined>input~span::after,
+        .pure-material-textfield-outlined>textarea~span::before,
+        .pure-material-textfield-outlined>textarea~span::after {
+            border-top-color: rgba($grey, 0.9);
+        }
+        .pure-material-textfield-outlined>input~span,
+        .pure-material-textfield-outlined>textarea~span {
+            color: rgba($grey, 0.9);
+        }
+        .pure-material-textfield-outlined>input:disabled~span,
+        .pure-material-textfield-outlined>textarea:disabled~span {
+            border-color: rgba($grey, 0.5) !important;
+            border-top-color: transparent !important;
+            color: rgba($grey, 0.5);
+            pointer-events: none;
+        }
+        .pure-material-textfield-outlined>input:disabled~span::before,
+        .pure-material-textfield-outlined>input:disabled~span::after,
+        .pure-material-textfield-outlined>textarea:disabled~span::before,
+        .pure-material-textfield-outlined>textarea:disabled~span::after {
+            border-top-color: rgba($grey, 0.5) !important;
+        }
+    }
+    &-group-dashboard {
+        .mobilenumber {
+            position: absolute;
+            padding: 0 25px 0 15px;
+            margin: 14px 5px 14px 0;
+            color: rgba($color: $white, $alpha: 0.7);
+            z-index: 1;
+            &::after {
+                content: "\e92a";
+                position: absolute;
+                color: rgba($color: $white, $alpha: 0.7);
+                font-size: size(12);
+                top: 5px;
+                right: 0;
+                padding-right: 5px;
+                border-right: 1px solid rgba($color: $white, $alpha: 0.7);
+            }
+        }
+        .disable-dropdown {
+            color: rgba($white, 0.3);
+            &::after {
+                border-color: rgba($white, 0.3);
+                color: rgba($white, 0.3);
+            }
+        }
+        .pure-material-textfield-outlined>input[name=mobileNo],
+        .pure-material-textfield-outlined>input[name=mobile],
+        .pure-material-textfield-outlined>input,
+        .pure-material-textfield-outlined>textarea {
+            color: $white;
+            border-color: rgba($color: $white, $alpha: 0.7);
+        }
+        .pure-material-textfield-outlined>input:focus~.login-mobile,
+        .pure-material-textfield-outlined>input:focus~.mobile-label {
+            padding: 0;
+            left: 0 !important;
+        }
+        .pure-material-textfield-outlined>input:not(:focus):placeholder-shown,
+        .pure-material-textfield-outlined>textarea:not(:focus):placeholder-shown {
+            border-top-color: rgba($color: $white, $alpha: 0.7) !important;
+            border-color: rgba($color: $white, $alpha: 0.7);
+        }
+        .pure-material-textfield-outlined:hover>input:not(:focus):placeholder-shown,
+        .pure-material-textfield-outlined:hover>textarea:not(:focus):placeholder-shown {
+            border-color: rgba($color: $white, $alpha: 0.7);
+        }
+        .pure-material-textfield-outlined:hover>input,
+        .pure-material-textfield-outlined:hover>textarea {
+            border-color: rgba($color: $white, $alpha: 0.7);
+        }
+        .pure-material-textfield-outlined>input~span::before,
+        .pure-material-textfield-outlined>input~span::after,
+        .pure-material-textfield-outlined>textarea~span::before,
+        .pure-material-textfield-outlined>textarea~span::after {
+            border-top-color: rgba($color: $white, $alpha: 0.7);
+        }
+        .pure-material-textfield-outlined>input~span,
+        .pure-material-textfield-outlined>textarea~span {
+            color: rgba($white, 0.7);
+        }
+        .pure-material-textfield-outlined>input:disabled,
+        .pure-material-textfield-outlined>input:disabled~span,
+        .pure-material-textfield-outlined>textarea:disabled,
+        .pure-material-textfield-outlined>textarea:disabled~span {
+            border-color: rgba($white, 0.3) !important;
+            border-top-color: transparent !important;
+            color: rgba($white, 0.3);
+            pointer-events: none;
+        }
+        .pure-material-textfield-outlined>input:disabled~span::before,
+        .pure-material-textfield-outlined>input:disabled~span::after,
+        .pure-material-textfield-outlined>textarea:disabled~span::before,
+        .pure-material-textfield-outlined>textarea:disabled~span::after {
+            border-top-color: rgba($white, 0.3) !important;
+        }
+        .pure-material-textfield-outlined>input:disabled:placeholder-shown,
+        .pure-material-textfield-outlined>input:disabled:placeholder-shown~span,
+        .pure-material-textfield-outlined>textarea:disabled:placeholder-shown,
+        .pure-material-textfield-outlined>textarea:disabled:placeholder-shown~span {
+            border-top-color: rgba($white, 0.3) !important;
+        }
+    }
+}
+.form-group {
+    .pure-material-textfield-outlined>input:-webkit-autofill,
+    .pure-material-textfield-outlined>input:-webkit-autofill:hover,
+    .pure-material-textfield-outlined>input:-webkit-autofill:focus,
+    .pure-material-textfield-outlined>input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        border-top: none;
+    }
+}
+.country-dropdown {
+    position: absolute;
+    top: 25px;
+}
+
+.common-input{
+    width: 100%;
+}

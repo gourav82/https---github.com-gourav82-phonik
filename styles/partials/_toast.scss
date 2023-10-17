@@ -1,0 +1,33 @@
+.toast {
+    &--container {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        position: fixed;
+        padding: 0px 60px;
+        border-radius: 10px;
+        right: 50px;
+        z-index: 200;
+        top: 200px;
+
+        @include max(1024) {
+            padding: 0px 20px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: 80px;
+        }
+
+        span,
+        a {
+            padding: 20px 0;
+        }
+
+        span {
+            margin: 0px 15px;
+            @include max(1024) {
+                margin: 0px 5px;
+            }
+        }
+    }
+}

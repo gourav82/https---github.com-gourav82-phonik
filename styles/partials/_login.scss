@@ -1,0 +1,106 @@
+.login {
+    &--modal {
+        &-wrap {
+            .logo-img {
+                width: 270px;
+            }
+
+            .section--title::after {
+                border-bottom: 2px solid $goldColor;
+            }
+        }
+
+        &-top {
+            .brand-word {
+                .underline-txt {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        height: 2px;
+                        width: 103%;
+                        background: $goldColor;
+                        position: absolute;
+                        left: -1px;
+                        bottom: -8px;
+                    }
+                }
+            }
+
+            .box-container {
+                position: relative;
+
+                .square-bx {
+                    font-size: 3px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        &-form {
+            box-shadow: $boxShadow;
+            border-radius: 12px;
+        }
+        &-button {
+            .fb {
+                background-color: #1877F2;
+            }
+            .google {
+                background-color: #F5594D;
+            }
+        }
+
+        .modal-content {
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; 
+            &::-webkit-scrollbar { /* WebKit */
+                width: 0;
+                height: 0;
+            }
+            max-height: 85vh;
+        }
+    }
+}
+
+.otp {
+    &-container {
+        margin: 20px 0 25px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        input {
+            width: 45px;
+            height: 45px;
+            border: 1px solid rgba($grey, 0.4);
+            border-radius: 8px;
+            margin-right: 10px;
+            text-align: center;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            @include max(1024) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    &-content {
+        margin: 0 0 15px;
+
+        .dintOtp {
+            color: $grey;
+        }
+
+        p {
+            margin: 0 0 8px;
+        }
+
+    }
+}
